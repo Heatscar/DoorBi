@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ------------
+------------BASE------------
+------------ */
+
+html{
+    background-color: white;
+    color: #ffffff;
+    font-family: 'Marmelad', sans-serif;
+    font-weight: 300;
+    /* Para optimizar la legibilidad y cargar el texto rapido */
+    text-rendering: optimizeLegibility;
+    /* Para declarar los demas pixeles como REM */
+    font-size: 62.5%;
+}
+
+/* ------------
+------------HEADER------------
+------------ */
+.header-nav{
+    background:rgb(0, 0, 0);
+}
+
+#btnMenu{
+    display: none; 
+}
+
+.header-nav label{
+    display: none;
+    width: 20px;
+    height: 20px;
+    padding: 30px;
+
+}
+
+.header-nav label:hover{
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3)
+}
+
+.menu ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu li{
+    border-right: 2px solid rgb(255, 0, 0);
+}
+
+.menu li:hover{
+    background: rgba(0, 0, 0, 0.3)
+}
+
+.menu li a{
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+}
+
+
+header{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.24),rgba(128, 128, 128, 0.137)), url(../img/background3.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+h1{
+    margin-top: 15%;
+}
+
+.title{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 10%;
+}
+/* ------------
+------------SECTION------------
+------------ */
+
+section.section-features{
+    padding: 8rem 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.24),rgba(128, 128, 128, 0.137)), url(../img/background2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    text-align: center;
+}
+
+section h1{
+    font-size: 3rem;
+}
+
+img.logo-doorbi{
+    width: 70%;
+}
+
+.section-features{
+    border: 2px black solid;
+}
+
+.row{
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+p{
+    background-color: #00000028;
+    color: rgb(255, 255, 255);
+    width: 90%;
+    text-align: justify;
+    font-size: 2rem;
+    margin: 0 auto;
+}
+
+p.info{
+    font-size: 5rem;
+    background-color: rgba(0, 0, 0, 0.664);
+    text-align: center;
+}
+p.parrafo-info{
+    background-color: rgba(0, 0, 0, 0.664);
+}
+
+section.section-info{
+    padding: 8rem 0;
+    background-image: linear-gradient(rgba(65, 91, 109,0.24),rgba(65, 91, 109, 0.137)), url(../img/IOT.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+}
+
+button.join{
+    color: #ffffff;
+    background-color: #000000;
+    border: 2px rgb(255, 0, 0) solid;
+    border-radius: 10px;
+    width: 50%;
+    font-size: 2rem;
+    margin-top: 5%;
+}
+.join:hover {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+}
+
+div.row.media{
+    margin-top: 5%;
+    font-size: 1rem;
+    background-color: #1b1b1b;
+}
+
+div.row.media p{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.section-img{
+    width: 60%;
+}
+
+input{
+    width: 50%;
+}
+
+.formulario{
+    margin: 0 auto;
+    text-align: center;
+}
+label{
+    font-size: 2rem;
+}
+input#enviar{
+    width: 20%;
+}
+textarea.contenido{
+    width: 50%;
+    font-size: 1.5rem;
+}
+
+/* ------------
+------------FOOTER------------
+------------ */
+
+footer{
+    background-color: #000000;
+}
+
+footer p{
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+footer a{
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: none;
+}
+img.media-icon{
+    max-width: 20%;
+}
+
+
+
+/* ------------
+------------INICIA RESPONSIVE------------
+------------ */
+@media (max-width: 450px) {
+    .list{
+        font-size: 1rem;
+    }
+    img.media-icon{
+        max-width: 10%;
+    }
+    img.Doorbi-header{
+        width: 90%;
+    }
+    p.parrafo{
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    /* --------------MENU HAMBURGUESA-------------- */
+    .header-nav label{
+        display: block;
+    }
+    .header-nav{
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .menu{
+        position: absolute;
+        background:  rgba(72, 187, 232, 0.808);
+        width: 70%;
+        margin-left: -70%;
+        transition: all 0.5s;
+        z-index: 1;
+    }
+    .menu{
+        position: fixed;
+    }
+    .menu + .header-nav{
+        padding: 50px;
+    }
+    .menu ul{
+        flex-direction: column;
+        z-index: 1;
+    }
+    .menu li{
+        border-top: 1px solid white;
+        border-right: none;
+        z-index: 1;
+    }
+
+    #btnMenu:checked ~ .menu{
+        margin: 0;
+        z-index: 1;
+    }
+}
+
+
+
