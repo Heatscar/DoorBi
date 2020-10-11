@@ -18,11 +18,22 @@ html{
     font-size: 62.5%;
 }
 
+@font-face {
+    font-family: Grotesk;
+    src: url(/src/font/typo-grotesk.regular.otf);
+    }
+
 /* ------------
 ------------HEADER------------
 ------------ */
 .header-nav{
-    background:rgb(0, 0, 0);
+    background:#1e2c5d;
+}
+
+a.LogoDoorbi {
+    font-family: Grotesk;
+    font-size: 7rem !important;
+    font-weight: bold;
 }
 
 #btnMenu{
@@ -48,9 +59,9 @@ html{
     list-style: none;
 }
 
-.menu li{
+/* .menu li{
     border-right: 2px solid rgb(255, 0, 0);
-}
+} */
 
 .menu li:hover{
     background: rgba(0, 0, 0, 0.3)
@@ -66,7 +77,7 @@ html{
 }
 
 
-header{
+header.header{
     background-image: linear-gradient(rgba(255, 255, 255, 0.24),rgba(128, 128, 128, 0.137)), url(../img/background3.jpg);
     background-size: cover;
     background-position: center;
@@ -186,20 +197,38 @@ textarea.contenido{
     font-size: 1.5rem;
 }
 
+h1.notificaciones-centro{
+    background-color: #ecdf0e;
+    border-radius: 5px;
+    color: black;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: auto;
+    margin-top: -1%;
+    width: 15%;
+}
+
+img.profile-pic{
+    width: 25%;
+}
+
 /* ------------
 ------------FOOTER------------
 ------------ */
 
 footer{
-    background-color: #000000;
+    background:#1e2c5d;
+    height: 15vh;
 }
 
 footer p{
     font-size: 2rem;
-    color: white;
+    color: black;
     text-align: center;
 }
 footer a{
+    color: black;
     text-align: center;
     font-size: 2rem;
     text-decoration: none;
